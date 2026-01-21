@@ -2,5 +2,5 @@
 
 cp tempo.raku tempo
 chmod +x tempo
-sudo mv ./tempo /usr/local/bin/tempo
+sudo mv -i ./tempo /usr/local/bin/tempo
 echo "[!!!] ./tempo instalado com sucesso"

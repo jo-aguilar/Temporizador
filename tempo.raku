@@ -52,9 +52,14 @@ sub MAIN(Str $Entrada1){
 							if ($s==0 and $m>0) { $s=59; $m--;}
 							
 							shell('clear');
-							say $h.fmt('%02d') ~ ":" ~ 
-							    $m.fmt('%02d') ~ ":" ~ 
-							    $s.fmt('%02d');
+							#say $h.fmt('%02d') ~ ":" ~ $m.fmt('%02d') ~ ":" ~ $s.fmt('%02d');
+							say qq:to/END/;
+							=-= TEMPORIZADOR =-=
+							[entrada]  {$horas ~ ":" ~ $minutos ~ ":" ~ $segundos}
+							[restante] {$h.fmt('%02d') ~ ":" ~ $m.fmt('%02d') ~ ":" ~ $s.fmt('%02d');}
+							
+							END
+
 							sleep(1);
 						}
 					}
